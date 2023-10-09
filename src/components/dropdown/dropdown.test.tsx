@@ -7,6 +7,7 @@ describe("Dropdown", () => {
   it("hides dropdown view", async () => {
     render(
       <Dropdown
+        enableAnimations={false}
         icon={null}
         label={"display_label"}
         iconBackground={"blue"}
@@ -23,6 +24,7 @@ describe("Dropdown", () => {
   it("displays dropdown view", async () => {
     render(
       <Dropdown
+        enableAnimations={false}
         icon={null}
         label={"display_label"}
         iconBackground={"blue"}
@@ -46,6 +48,7 @@ describe("Dropdown", () => {
   it("displays and hides dropdown view", async () => {
     render(
       <Dropdown
+        enableAnimations={false}
         icon={null}
         label={"display_label"}
         iconBackground={"blue"}

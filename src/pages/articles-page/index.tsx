@@ -83,16 +83,16 @@ export const ArticlesPage = () => {
     <div className={styles.ArticlesPage}>
       <PageHeader title={"Top Wikipedia Articles"} />
       <SearchBar handleSearch={search} startDate={startDate} />
-      {pinned.length ? (
-        <div className={styles.ArticlesPagePinned}>
-          <List
-            items={pinned}
-            renderView={(item: Article) => (
-              <ArticleListItem article={item} handlePinClick={handlePinClick} />
-            )}
-          />
-        </div>
-      ) : null}
+      <div className={styles.ArticlesPagePinned}>
+        <List
+          items={pinned}
+          emptyMessage="No pinned articles to display"
+          enableAnimations={true}
+          renderView={(item: Article) => (
+            <ArticleListItem article={item} handlePinClick={handlePinClick} />
+          )}
+        />
+      </div>
       <div className={styles.ArticlesList}>
         {error ? <Error message={error} /> : null}
         {loading ? (
@@ -102,6 +102,7 @@ export const ArticlesPage = () => {
         ) : null}
         <List
           items={activeData}
+          emptyMessage="No articles to found"
           renderView={(item: Article) => (
             <ArticleListItem article={item} handlePinClick={handlePinClick} />
           )}

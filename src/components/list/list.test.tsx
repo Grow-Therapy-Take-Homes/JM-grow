@@ -7,12 +7,32 @@ describe("List", () => {
   it("displays correct the correct items", () => {
     render(
       <List
-        items={[<p>4</p>, <p>2</p>, <p>2</p>, <p>4</p>]}
-        renderView={(item) => <span>{item}</span>}
+        items={[
+          { article: "Article 1" },
+          { article: "Article 2" },
+          { article: "Article 3" },
+          { article: "Article 4" },
+        ]}
+        emptyMessage="No articles to display"
+        renderView={(item) => <span>{item.article}</span>}
       />
     );
 
-    expect(screen.getAllByText(4)).toHaveLength(2);
-    expect(screen.getAllByText(2)).toHaveLength(2);
+    expect(screen.getByText("Article 1")).toBeVisible();
+    expect(screen.getByText("Article 2")).toBeVisible();
+    expect(screen.getByText("Article 3")).toBeVisible();
+    expect(screen.getByText("Article 4")).toBeVisible();
+  });
+
+  it("displays empty message", () => {
+    render(
+      <List
+        items={[]}
+        emptyMessage="No articles to display"
+        renderView={() => <p></p>}
+      />
+    );
+
+    expect(screen.getByText("No articles to display")).toBeVisible();
   });
 });

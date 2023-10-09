@@ -1,11 +1,13 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { useOutsideClick } from "../../hooks/use-outside-click";
 
 import styles from "./dropdown.module.css";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 interface DropdownProps {
   icon: React.ReactNode;
+  enableAnimations?: boolean;
   label: string;
   children: React.ReactNode;
   iconBackground: string;
@@ -13,6 +15,7 @@ interface DropdownProps {
 }
 
 export const Dropdown = ({
+  enableAnimations = true,
   icon,
   label,
   children,
@@ -23,12 +26,17 @@ export const Dropdown = ({
   const [isOpen, setIsOpen] = useState(false);
 
   useOutsideClick(dropdown, () => setIsOpen(false));
+  const [parent, setEnabled] = useAutoAnimate();
 
   const handleEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       setIsOpen(!isOpen);
     }
   };
+
+  useEffect(() => {
+    setEnabled(enableAnimations);
+  }, [enableAnimations, setEnabled]);
 
   return (
     <div
@@ -67,7 +75,9 @@ export const Dropdown = ({
           />
         </div>
       </div>
-      <div className={styles.DropDownView}>{isOpen ? children : null}</div>
+      <div className={styles.DropDownView} ref={parent}>
+        {isOpen ? children : null}
+      </div>
     </div>
   );
 };
