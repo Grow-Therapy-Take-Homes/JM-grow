@@ -2,4 +2,5 @@
   display: flex;
   justify-content: center;
   font-family: var(--site-serif-font);
+  margin: 3rem 0rem 3rem 0rem;
 }
