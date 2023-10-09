@@ -7,7 +7,7 @@ Please read below for information on how to run, features and choices I made whi
 - install the dependencies. ex: `npm install`
 - to run in dev mode. ex: `npm run dev`
 - if you would like the app can also be previewed for a production build. ex: `npm run preview`
-- there should be 11 passing test for view components and utils. ex `npm run test`
+- there should be 12 passing test for view components and utils. ex `npm run test`
 
 ## Features Included and Design Choices
 
