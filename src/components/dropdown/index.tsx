@@ -24,7 +24,7 @@ export const Dropdown = ({
 
   useOutsideClick(dropdown, () => setIsOpen(false));
 
-  const handleEnter = (e) => {
+  const handleEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       setIsOpen(!isOpen);
     }

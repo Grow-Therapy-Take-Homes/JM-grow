@@ -12,7 +12,7 @@ interface PaginationProps {
 const PAGE_RANGE_SIZE = 5;
 
 function rangeReducer(
-  state: number[],
+  _state: number[],
   {
     pageCount,
     page,

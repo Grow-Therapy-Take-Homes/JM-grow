@@ -9,8 +9,8 @@ export const getDate = (
 ): DateObject => {
   const date = new Date(timestamp);
 
-  let month = date.getMonth() + 1;
-  month = month.toString().padStart(2, "0");
+  const monthNum = date.getMonth() + 1;
+  const month = monthNum.toString().padStart(2, "0");
   const day = date.getDate().toString().padStart(2, "0");
   const year = date.getFullYear();
 

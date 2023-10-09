@@ -15,7 +15,7 @@ export const DatePicker = ({ onChange, value }: DatePickerProps) => {
         maxDate={new Date()}
         value={value}
         panelStyle={{ borderRadius: "1rem" }}
-        onChange={(e) => onChange(e.value)}
+        onChange={(e) => onChange(e.value as Date)}
         inline
       />
     </div>
