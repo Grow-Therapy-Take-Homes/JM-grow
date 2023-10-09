@@ -19,6 +19,7 @@
 
 .ArticlesPageLoading > div {
   transform: translateY(-50%);
+  z-index: 1;
 }
 
 .ArticlesList,
