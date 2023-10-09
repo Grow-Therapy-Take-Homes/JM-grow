@@ -1,0 +1,48 @@
+.ArticleListItem {
+  max-width: 100%;
+  display: flex;
+  border: 1px solid var(--site-border-color);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem 0 1rem 0;
+  gap: 1rem;
+}
+
+.ArticleRank,
+.ArticleViews {
+  color: var(--site-light-black);
+}
+
+.ArticleRank {
+  font-family: var(--site-serif-font);
+}
+
+.ArticleViews {
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+.ArticleTitle {
+  flex-grow: 1;
+  gap: 1rem;
+  font-family: var(--site-serif-font);
+}
+
+.ArticlePin {
+  cursor: pointer;
+}
+
+.ArticlePinButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.ArticlePin svg {
+  transition: color 0.15s ease-in-out;
+}
+
+.ArticlePin svg:hover {
+  color: var(--site-dark-orange) !important;
+}

@@ -1,0 +1,72 @@
+.SearchBar {
+  width: 100%;
+  border-radius: 9999px;
+  height: 5.5rem;
+  background: var(--site-white);
+  display: flex;
+  box-shadow: var(--site-shadow);
+  justify-content: space-evenly;
+}
+
+.SearchBarDropDown {
+  box-shadow: var(--site-modal-shadow);
+}
+
+.SearchBarWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  align-items: center;
+  width: calc(100% - 1.5rem);
+}
+
+.SearchBarButton {
+  border-radius: 9999px;
+  height: 4rem;
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--site-dark-green);
+  border: none;
+  cursor: pointer;
+  color: var(--site-white);
+  font-size: 1rem;
+}
+
+.SearchBarDropDowns {
+  display: flex;
+  gap: 2rem;
+  flex-grow: 1;
+  height: calc(100% - 1.5rem);
+}
+
+.SearchBarDivider {
+  width: 2px;
+  height: 100%;
+  background: var(--site-light-gray);
+}
+
+@media (width <= 720px) {
+  .SearchBarButton {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .SearchBar {
+    border-radius: 0;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .SearchBarWrapper,
+  .SearchBarDropDowns {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .SearchBarDivider {
+    display: none;
+  }
+}

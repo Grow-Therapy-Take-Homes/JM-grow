@@ -1,0 +1,30 @@
+.Pagination {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.PaginationButton {
+  border-radius: 100%;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  line-height: 1rem;
+  border: 0.1rem solid var(--site-border-color);
+  background: var(--site-white);
+  margin: 0.25rem;
+  transition: background 0.25s ease-in-out;
+}
+
+.PaginationButtonDisabled {
+  background: #d4d8d9;
+}
+
+.PaginationButtonGroup {
+  margin: 0 0.5rem 0 0.5rem;
+}
+
+.PaginationButtonSelected {
+  background: var(--site-light-green);
+  color: var(--site-dark-green);
+}

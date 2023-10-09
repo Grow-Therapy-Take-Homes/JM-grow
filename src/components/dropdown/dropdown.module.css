@@ -1,0 +1,85 @@
+.DropDown {
+  display: flex;
+  gap: 1rem;
+  border-radius: 99999px;
+  padding: 0.5rem;
+  flex-grow: 1;
+  cursor: pointer;
+  transition: background 0.25s ease-in-out;
+  position: relative;
+}
+
+.DropDown:hover,
+.DropDownOpen {
+  display: flex;
+  background: var(--site-light-gray);
+}
+
+.DropDownWrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.DropDownView {
+  position: absolute;
+  top: 5rem;
+  bottom: 0;
+  min-width: 90%;
+  z-index: 1;
+}
+
+.DropdownIcon {
+  border-radius: 50%;
+  padding: 1.5rem;
+  height: 1rem;
+  width: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.DropDownInputWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+.DropDownInputLabel {
+  display: flex;
+  gap: 0.25rem;
+  font-size: 0.7rem;
+  color: var(--site-light-black);
+}
+
+.DropDownInputValue {
+  font-size: 1rem;
+}
+
+.DropDownCaret {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(0deg);
+  transform-origin: center;
+  transition: transform 0.25s ease-in-out;
+  font-size: 0.5rem;
+}
+
+.DropDownInput {
+  outline: none;
+  font-size: 1rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.RotateCaret {
+  transform: rotate(180deg);
+}
+
+@media screen and (max-width: 720px) {
+  .DropDownView {
+    min-width: 30%;
+  }
+}

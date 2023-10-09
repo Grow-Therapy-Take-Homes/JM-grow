@@ -1,0 +1,8 @@
+.List {
+  list-style: none;
+  padding: 1rem;
+  background: var(--site-white);
+  border-radius: 0.5rem;
+  margin-top: 0;
+  box-shadow: var(--site-shadow);
+}

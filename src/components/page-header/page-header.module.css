@@ -1,0 +1,5 @@
+.PageHeader {
+  display: flex;
+  justify-content: center;
+  font-family: var(--site-serif-font);
+}

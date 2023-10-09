@@ -1,0 +1,26 @@
+.Select {
+  padding: 1rem;
+  background: var(--site-white);
+  border-radius: 1rem;
+  box-shadow: var(--site-modal-shadow);
+}
+
+.SelectItem {
+  text-align: center;
+  padding: 0.75rem;
+  cursor: pointer;
+  transition: background 0.25s ease-in-out;
+}
+
+.SelectItem:hover {
+  background: var(--site-light-gray);
+}
+
+.SelectItemSelected {
+  background: var(--site-light-orange);
+  color: var(--site-dark-orange);
+}
+
+.ListItem:hover {
+  background: var(--site-light-gray);
+}

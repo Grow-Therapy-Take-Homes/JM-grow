@@ -1,0 +1,5 @@
+.DatePicker {
+  box-shadow: var(--site-modal-shadow);
+  z-index: 99999;
+  border-radius: 1rem;
+}
