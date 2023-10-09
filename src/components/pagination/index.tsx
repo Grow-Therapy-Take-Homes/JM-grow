@@ -41,7 +41,7 @@ export const Pagination = ({
   setPage,
   pageRangeSize = PAGE_RANGE_SIZE,
 }: PaginationProps) => {
-  const [range, setStartRange] = useReducer(rangeReducer, []);
+  const [range, setRange] = useReducer(rangeReducer, []);
 
   const handlePageChange = (direction: number) => {
     const newPage = currentPage + direction;
@@ -54,7 +54,7 @@ export const Pagination = ({
   };
 
   useEffect(() => {
-    setStartRange({ page: currentPage, pageCount, pageRangeSize });
+    setRange({ page: currentPage, pageCount, pageRangeSize });
   }, [pageCount, currentPage, pageRangeSize]);
 
   return (
