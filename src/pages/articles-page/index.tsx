@@ -102,7 +102,7 @@ export const ArticlesPage = () => {
         ) : null}
         <List
           items={activeData}
-          emptyMessage="No articles to found"
+          emptyMessage="No articles found"
           renderView={(item: Article) => (
             <ArticleListItem article={item} handlePinClick={handlePinClick} />
           )}

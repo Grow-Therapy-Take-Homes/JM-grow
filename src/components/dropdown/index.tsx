@@ -24,9 +24,8 @@ export const Dropdown = ({
 }: DropdownProps) => {
   const dropdown = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
-
-  useOutsideClick(dropdown, () => setIsOpen(false));
   const [parent, setEnabled] = useAutoAnimate();
+  useOutsideClick(dropdown, () => setIsOpen(false));
 
   const handleEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
