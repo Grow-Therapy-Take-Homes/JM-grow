@@ -1,6 +1,7 @@
 import { useAutoAnimate } from "@formkit/auto-animate/react";
-import styles from "./list.module.css";
 import { useEffect } from "react";
+
+import styles from "./list.module.css";
 
 // would rather use an id but the api doesn't provide one
 interface ListProps<T extends { article: string }> {

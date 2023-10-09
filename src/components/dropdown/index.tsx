@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 import { useOutsideClick } from "../../hooks/use-outside-click";
 
 import styles from "./dropdown.module.css";
-import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 interface DropdownProps {
   icon: React.ReactNode;
